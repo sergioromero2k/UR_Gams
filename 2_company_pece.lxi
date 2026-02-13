@@ -1,0 +1,27 @@
+B 3 C o m p i l a t i o n
+B 36 Equation Listing    SOLVE Company_Pece Using LP From line 23
+D 39 beneficio
+D 44 restriction_1
+D 49 restriction_2
+D 54 restriction_3
+B 60 Column Listing      SOLVE Company_Pece Using LP From line 23
+E 63 z
+E 70 xa
+E 79 xb
+E 88 xc
+B 98 Range Statistics    SOLVE Company_Pece Using LP From line 23
+B 109 Model Statistics    SOLVE Company_Pece Using LP From line 23
+B 122 Solution Report     SOLVE Company_Pece Using LP From line 23
+F 155 beneficio
+F 156 restriction_1
+F 157 restriction_2
+F 158 restriction_3
+G 162 z
+G 163 xa
+G 164 xb
+G 165 xc
+B 173 E x e c u t i o n
+I 175 xa
+I 176 xb
+I 177 xc
+I 178 z

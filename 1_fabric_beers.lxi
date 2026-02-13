@@ -1,0 +1,18 @@
+B 3 C o m p i l a t i o n
+B 43 Equation Listing    SOLVE Lab1_Ejemplo01 Using MIP From line 36
+D 46 beneficio
+D 51 restriccion_1
+D 56 restriccion_2
+B 62 Column Listing      SOLVE Lab1_Ejemplo01 Using MIP From line 36
+E 65 z
+E 72 x1
+E 81 x2
+B 91 Range Statistics    SOLVE Lab1_Ejemplo01 Using MIP From line 36
+B 102 Model Statistics    SOLVE Lab1_Ejemplo01 Using MIP From line 36
+B 115 Solution Report     SOLVE Lab1_Ejemplo01 Using MIP From line 36
+F 160 beneficio
+F 161 restriccion_1
+F 162 restriccion_2
+G 166 z
+G 167 x1
+G 168 x2

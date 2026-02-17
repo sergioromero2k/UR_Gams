@@ -1,4 +1,4 @@
-# Optimización Matemática con GAMS: Guía Teórica y Práctica
+# Optimización Matemática con GAMS
 
 Este repositorio está dedicado al estudio y resolución de problemas de programación matemática utilizando **GAMS** (General Algebraic Modeling System). La optimización es un pilar fundamental en la toma de decisiones basada en datos, permitiendo encontrar la mejor solución posible bajo un conjunto de restricciones dadas.
 
@@ -48,7 +48,7 @@ Sets
 | Entera | `Integer Variables x1, x2;` | enteros ≥ 0 |
 | Binaria | `Binary Variables x1, x2;` | {0, 1} |
 
-> 💡 **Tip:** deja `z` como libre y `x1, x2` como positivas o enteras según LP o MIP.
+>  **Tip:** deja `z` como libre y `x1, x2` como positivas o enteras según LP o MIP.
 
 ### D. Ecuaciones (`Equations`)
 
@@ -74,7 +74,7 @@ Solve mi_modelo using MIP maximizing z;
 - `MIP` → variables enteras o binarias
 - `maximizing` / `minimizing` → sentido de la función objetivo
 
-> 💡 **Tip:** el `Model` es obligatorio antes del `Solve`.
+>  **Tip:** el `Model` es obligatorio antes del `Solve`.
 
 ---
 
@@ -92,7 +92,7 @@ Todo lo que esté aquí se ignora
 $offtext
 ```
 
-> 💡 **Tip:** usa `$ontext ... $offtext` para desactivar bloques de código sin borrarlos (ej. alternar entre versión LP y MIP).
+>  **Tip:** usa `$ontext ... $offtext` para desactivar bloques de código sin borrarlos (ej. alternar entre versión LP y MIP).
 
 ---
 

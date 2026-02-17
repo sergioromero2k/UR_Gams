@@ -1,0 +1,27 @@
+# --- GAMS output files and reports ---
+# Listing file (contains the solution and execution statistics)
+*.lst
+
+# Index and log record files
+*.lxi
+*.log
+
+# --- Execution temporary files ---
+# Save state files (Save files)
+*.g00
+*.g01
+*.g02
+
+# Temporary control files
+*.~gm
+*.put
+*.ref
+
+# --- Data exchange ---
+# Binary data files (GAMS Data Exchange)
+# Only remove this if you need to upload specific .gdx data files
+*.gdx
+
+# --- System/IDE files ---
+# GAMS Studio project files or legacy IDE project files
+*.gpr

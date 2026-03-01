@@ -1,139 +1,139 @@
-# Optimización Matemática con GAMS
+# Mathematical Optimization with GAMS
 
-Este repositorio está dedicado al estudio y resolución de problemas de programación matemática utilizando **GAMS** (General Algebraic Modeling System). La optimización es un pilar fundamental en la toma de decisiones basada en datos, permitiendo encontrar la mejor solución posible bajo un conjunto de restricciones dadas.
-
----
-
-## 1. Fundamentos Teóricos
-
-Un problema de optimización matemática se compone de tres elementos principales:
-
-- **Variables de Decisión:** Son las incógnitas que el modelo debe determinar (ej. cantidad de producto a fabricar). Pueden ser:
-  - **Continuas:** Pueden tomar cualquier valor real (ej. $x \geq 0$).
-  - **Enteras:** Solo toman valores discretos ($x \in \mathbb{Z}$).
-  - **Binarias:** Solo pueden ser 0 o 1 (útiles para decisiones de sí/no).
-- **Función Objetivo:** Expresión matemática que queremos maximizar (beneficios, eficiencia) o minimizar (costes, tiempo, errores).
-- **Restricciones:** Igualdades o desigualdades que limitan el espacio de soluciones posibles (recursos limitados, leyes físicas, demandas de mercado).
-
-### Tipos de Modelos comunes en GAMS
-
-- **LP (Linear Programming):** Función objetivo y restricciones lineales, con variables continuas.
-- **MIP (Mixed Integer Programming):** Igual que LP pero admite variables enteras o binarias.
+This repository is dedicated to the study and resolution of mathematical programming problems using **GAMS** (General Algebraic Modeling System). Optimization is a fundamental pillar in data-driven decision making, allowing us to find the best possible solution under a given set of constraints.
 
 ---
 
-## 2. Estructura de un Modelo en GAMS
+## 1. Theoretical Foundations
 
-### A. Conjuntos (`Sets`)
+A mathematical optimization problem consists of three main elements:
 
-Indexan variables y parámetros para que el modelo sea escalable.
+- **Decision Variables:** The unknowns that the model must determine (e.g., quantity of product to manufacture). They can be:
+  - **Continuous:** Can take any real value (e.g., $x \geq 0$).
+  - **Integer:** Only take discrete values ($x \in \mathbb{Z}$).
+  - **Binary:** Can only be 0 or 1 (useful for yes/no decisions).
+- **Objective Function:** Mathematical expression that we want to maximize (profit, efficiency) or minimize (costs, time, errors).
+- **Constraints:** Equalities or inequalities that limit the space of feasible solutions (limited resources, physical laws, market demands).
+
+### Common Model Types in GAMS
+
+- **LP (Linear Programming):** Linear objective function and constraints, with continuous variables.
+- **MIP (Mixed Integer Programming):** Same as LP but allows integer or binary variables.
+
+---
+
+## 2. Structure of a GAMS Model
+
+### A. Sets
+
+Index variables and parameters to make the model scalable.
 ```gams
 Sets
-    i  "Tipos de productos"      /A, B, C/
-    j  "Centros de distribución" /C1, C2/;
+    i  "Product types"           /A, B, C/
+    j  "Distribution centers"    /C1, C2/;
 ```
 
-### B. Datos (`Parameters`, `Tables`)
+### B. Data (`Parameters`, `Tables`)
 
-- **Parameters:** Valores escalares o vectores.
-- **Tables:** Matrices de datos (ej. matriz tecnológica).
+- **Parameters:** Scalar values or vectors.
+- **Tables:** Data matrices (e.g., technology matrix).
 
 ### C. Variables
 
-| Tipo | Sintaxis | Dominio |
-|------|----------|---------|
-| Libre | `Variable z;` | ±∞ |
-| Libre explícito | `Free Variable z;` | ±∞, equivalente a `Variable` |
-| Positiva | `Positive Variables x1, x2;` | ≥ 0 |
-| Entera | `Integer Variables x1, x2;` | enteros ≥ 0 |
-| Binaria | `Binary Variables x1, x2;` | {0, 1} |
+| Type | Syntax | Domain |
+|------|--------|--------|
+| Free | `Variable z;` | ±∞ |
+| Free explicit | `Free Variable z;` | ±∞, equivalent to `Variable` |
+| Positive | `Positive Variables x1, x2;` | ≥ 0 |
+| Integer | `Integer Variables x1, x2;` | integers ≥ 0 |
+| Binary | `Binary Variables x1, x2;` | {0, 1} |
 
->  **Tip:** deja `z` como libre y `x1, x2` como positivas o enteras según LP o MIP.
+> **Tip:** Leave `z` as free and `x1, x2` as positive or integer depending on LP or MIP.
 
-### D. Ecuaciones (`Equations`)
+### D. Equations
 
-Se declaran primero los nombres y luego se define su contenido matemático. La doble `..` es siempre obligatoria.
+Names are declared first, then their mathematical content is defined. The double `..` is always required.
 
-| Operador | Significado |
-|----------|-------------|
-| `=e=` | Igualdad ($=$) |
-| `=l=` | Menor o igual ($\leq$) |
-| `=g=` | Mayor o igual ($\geq$) |
+| Operator | Meaning |
+|----------|---------|
+| `=e=` | Equality ($=$) |
+| `=l=` | Less than or equal ($\leq$) |
+| `=g=` | Greater than or equal ($\geq$) |
 
-### E. Modelo y Ejecución (`Model` y `Solve`)
+### E. Model and Execution (`Model` and `Solve`)
 
-Se agrupan las ecuaciones y se llama al optimizador indicando el tipo de problema y el objetivo.
+Equations are grouped and the optimizer is called specifying the problem type and objective.
 ```gams
-Model mi_modelo /all/;         * /all/ incluye todas las ecuaciones
-* Model mi_modelo /r1, r2/;   * o lista solo las que necesites
-Solve mi_modelo using LP  maximizing z;
-Solve mi_modelo using MIP maximizing z;
+Model my_model /all/;          * /all/ includes all equations
+* Model my_model /r1, r2/;    * or list only the ones you need
+Solve my_model using LP  maximizing z;
+Solve my_model using MIP maximizing z;
 ```
 
-- `LP` → variables continuas
-- `MIP` → variables enteras o binarias
-- `maximizing` / `minimizing` → sentido de la función objetivo
+- `LP` → continuous variables
+- `MIP` → integer or binary variables
+- `maximizing` / `minimizing` → direction of the objective function
 
->  **Tip:** el `Model` es obligatorio antes del `Solve`.
+> **Tip:** The `Model` statement is mandatory before `Solve`.
 
 ---
 
-## 3. Comentarios en GAMS
+## 3. Comments in GAMS
 
-**Línea:**
+**Single line:**
 ```gams
-* Esto es un comentario
+* This is a comment
 ```
 
-**Bloque:**
+**Block:**
 ```gams
 $ontext
-Todo lo que esté aquí se ignora
+Everything here is ignored
 $offtext
 ```
 
->  **Tip:** usa `$ontext ... $offtext` para desactivar bloques de código sin borrarlos (ej. alternar entre versión LP y MIP).
+> **Tip:** Use `$ontext ... $offtext` to disable code blocks without deleting them (e.g., switching between LP and MIP versions).
 
 ---
 
-## 4. Ejemplos de Implementación
+## 4. Implementation Examples
 
-### Notación Algebraica (Problema Directo)
+### Algebraic Notation (Direct Problem)
 
-Ideal para problemas pequeños con pocas variables.
+Ideal for small problems with few variables.
 ```gams
 Variable z;
 Positive Variables x1, x2;
 
-Equations objetivo, r1, r2;
+Equations objective, r1, r2;
 
-objetivo.. z  =e= 100*x1 + 125*x2;
-r1..       3*x1 +  5*x2 =l= 15;
-r2..      90*x1 + 85*x2 =l= 350;
+objective.. z  =e= 100*x1 + 125*x2;
+r1..        3*x1 +  5*x2 =l= 15;
+r2..       90*x1 + 85*x2 =l= 350;
 
-Model mi_modelo /all/;
-Solve mi_modelo using lp maximizing z;
+Model my_model /all/;
+Solve my_model using lp maximizing z;
 ```
 
-### Notación Matricial (Problema Escalable)
+### Matrix Notation (Scalable Problem)
 
-Se utiliza `sum()` para manejar grandes volúmenes de datos de forma eficiente.
+Uses `sum()` to handle large volumes of data efficiently.
 ```gams
-Equation beneficio;
-beneficio.. z =e= sum(i, precios(i) * x(i));
+Equation profit;
+profit.. z =e= sum(i, prices(i) * x(i));
 ```
 
 ---
 
-## 5. Consejos para la Depuración y Estilo
+## 5. Debugging and Style Tips
 
-- **Sintaxis:** GAMS señala errores con `****` en el archivo de salida; corrígelos antes de volver a ejecutar.
-- **Model Status:** El resultado debe ser `Optimal`. Si aparece `Infeasible`, alguna restricción es imposible de satisfacer; revisa los datos y los límites del modelo.
-- Termina **todas** las sentencias con `;`.
-- Mantén la variable objetivo separada de las restricciones para mayor claridad.
-- Si cambias el tipo de variables (continuas → enteras → binarias), recuerda ajustar el `Solve`.
-- Nombra las ecuaciones de forma corta (`r1`, `r2`) para agilizar el trabajo.
-- Comenta siempre los bloques alternativos que dejes desactivados, por ejemplo:
+- **Syntax:** GAMS flags errors with `****` in the output file; fix them before re-running.
+- **Model Status:** The result should be `Optimal`. If `Infeasible` appears, some constraint cannot be satisfied; review the data and model bounds.
+- End **all** statements with `;`.
+- Keep the objective variable separate from constraints for clarity.
+- If you change variable types (continuous → integer → binary), remember to update the `Solve` statement.
+- Name equations with short labels (`r1`, `r2`) to speed up development.
+- Always comment out alternative blocks you leave disabled, for example:
 ```gams
 $ontext
 Integer Variables x1, x2;

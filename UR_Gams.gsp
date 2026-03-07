@@ -1,7 +1,7 @@
 {
     "dynamicMainFile": false,
-    "expand": "10010000",
-    "file": "Lab01/Ej04_company/company_pece.gms",
+    "expand": "10011101011001",
+    "file": "Lab01/Sesson_2/Example04/LAB1_Example04.gms",
     "name": "UR_Gams",
     "nodes": [
         {
@@ -28,49 +28,105 @@
         {
             "codecMib": 106,
             "encoding": "UTF-8",
-            "file": "Lab01/Ej01_Beers/1_fabric_beers.gms",
+            "file": "Lab01/Sesson_1/Ej01_Beers/1_fabric_beers.gms",
             "name": "1_fabric_beers.gms",
             "type": "gms"
         },
         {
             "codecMib": 106,
             "encoding": "UTF-8",
-            "file": "Lab01/Ej01_Beers/statement.md",
+            "file": "Lab01/Sesson_1/Ej01_Beers/statement.md",
             "name": "statement.md",
             "type": ""
         },
         {
             "codecMib": 106,
             "encoding": "UTF-8",
-            "file": "Lab01/Ej02_Pece/2_company_pece.gms",
+            "file": "Lab01/Sesson_1/Ej02_Pece/2_company_pece.gms",
             "name": "2_company_pece.gms",
             "type": "gms"
         },
         {
             "codecMib": 106,
             "encoding": "UTF-8",
-            "file": "Lab01/Ej03_mining/mining.gms",
+            "file": "Lab01/Sesson_1/Ej03_mining/mining.gms",
             "name": "mining.gms",
             "type": "gms"
         },
         {
             "codecMib": 106,
             "encoding": "UTF-8",
-            "file": "Lab01/Ej03_mining/statement.md",
+            "file": "Lab01/Sesson_1/Ej03_mining/statement.md",
             "name": "statement.md",
             "type": ""
         },
         {
             "codecMib": 106,
             "encoding": "UTF-8",
-            "file": "Lab01/Ej04_company/company_pece.gms",
+            "file": "Lab01/Sesson_1/Ej04_company/company_pece.gms",
             "name": "company_pece.gms",
             "type": "gms"
         },
         {
             "codecMib": 106,
             "encoding": "UTF-8",
-            "file": "Lab01/Ej04_company/statement.md",
+            "file": "Lab01/Sesson_1/Ej04_company/statement.md",
+            "name": "statement.md",
+            "type": ""
+        },
+        {
+            "codecMib": 106,
+            "encoding": "UTF-8",
+            "file": "Lab01/Sesson_2/Example01/LAB1_Example01.gms",
+            "name": "LAB1_Example01.gms",
+            "type": "gms"
+        },
+        {
+            "codecMib": 106,
+            "encoding": "UTF-8",
+            "file": "Lab01/Sesson_2/Example01/statement.md",
+            "name": "statement.md",
+            "type": ""
+        },
+        {
+            "codecMib": 106,
+            "encoding": "UTF-8",
+            "file": "Lab01/Sesson_2/Example02/LAB1_Example02.gms",
+            "name": "LAB1_Example02.gms",
+            "type": "gms"
+        },
+        {
+            "codecMib": 106,
+            "encoding": "UTF-8",
+            "file": "Lab01/Sesson_2/Example02/statement.md",
+            "name": "statement.md",
+            "type": ""
+        },
+        {
+            "codecMib": 106,
+            "encoding": "UTF-8",
+            "file": "Lab01/Sesson_2/Example03/LAB1_Example03.gms",
+            "name": "LAB1_Example03.gms",
+            "type": "gms"
+        },
+        {
+            "codecMib": 106,
+            "encoding": "UTF-8",
+            "file": "Lab01/Sesson_2/Example03/statement.md",
+            "name": "statement.md",
+            "type": ""
+        },
+        {
+            "codecMib": 106,
+            "encoding": "UTF-8",
+            "file": "Lab01/Sesson_2/Example04/LAB1_Example04.gms",
+            "name": "LAB1_Example04.gms",
+            "type": "gms"
+        },
+        {
+            "codecMib": 106,
+            "encoding": "UTF-8",
+            "file": "Lab01/Sesson_2/Example04/statement.md",
             "name": "statement.md",
             "type": ""
         },
@@ -84,22 +140,8 @@
         {
             "codecMib": 106,
             "encoding": "UTF-8",
-            "file": "1_fabric_beers.lst",
-            "name": "1_fabric_beers.lst",
-            "type": "lst"
-        },
-        {
-            "codecMib": 106,
-            "encoding": "UTF-8",
-            "file": "1_fabric_beers.lxi",
-            "name": "1_fabric_beers.lxi",
-            "type": "lxi"
-        },
-        {
-            "codecMib": 106,
-            "encoding": "UTF-8",
-            "file": "company_pece.lst",
-            "name": "company_pece.lst",
+            "file": "LAB1_Example04.lst",
+            "name": "LAB1_Example04.lst",
             "type": "lst"
         },
         {
@@ -131,6 +173,6 @@
     "path": ".",
     "pf": "",
     "projectType": 1,
-    "timestamp": "2026-03-01T10:43:08.855",
+    "timestamp": "2026-03-07T22:37:25.327",
     "workDir": "."
 }

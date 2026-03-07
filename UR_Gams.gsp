@@ -1,7 +1,7 @@
 {
     "dynamicMainFile": false,
-    "expand": "10011101011001",
-    "file": "Lab01/Sesson_2/Example04/LAB1_Example04.gms",
+    "expand": "100100000000000000",
+    "file": "Lab01/Sesson_2/Example08/LAB1_Example08.gms",
     "name": "UR_Gams",
     "nodes": [
         {
@@ -133,6 +133,62 @@
         {
             "codecMib": 106,
             "encoding": "UTF-8",
+            "file": "Lab01/Sesson_2/Example05/LAB1_Example05.gms",
+            "name": "LAB1_Example05.gms",
+            "type": "gms"
+        },
+        {
+            "codecMib": 106,
+            "encoding": "UTF-8",
+            "file": "Lab01/Sesson_2/Example05/statement.md",
+            "name": "statement.md",
+            "type": ""
+        },
+        {
+            "codecMib": 106,
+            "encoding": "UTF-8",
+            "file": "Lab01/Sesson_2/Example06/LAB1_Example06.gms",
+            "name": "LAB1_Example06.gms",
+            "type": "gms"
+        },
+        {
+            "codecMib": 106,
+            "encoding": "UTF-8",
+            "file": "Lab01/Sesson_2/Example06/statement.md",
+            "name": "statement.md",
+            "type": ""
+        },
+        {
+            "codecMib": 106,
+            "encoding": "UTF-8",
+            "file": "Lab01/Sesson_2/Example07/LAB1_Example07.gms",
+            "name": "LAB1_Example07.gms",
+            "type": "gms"
+        },
+        {
+            "codecMib": 106,
+            "encoding": "UTF-8",
+            "file": "Lab01/Sesson_2/Example07/statement.md",
+            "name": "statement.md",
+            "type": ""
+        },
+        {
+            "codecMib": 106,
+            "encoding": "UTF-8",
+            "file": "Lab01/Sesson_2/Example08/LAB1_Example08.gms",
+            "name": "LAB1_Example08.gms",
+            "type": "gms"
+        },
+        {
+            "codecMib": 106,
+            "encoding": "UTF-8",
+            "file": "Lab01/Sesson_2/Example08/statement.md",
+            "name": "statement.md",
+            "type": ""
+        },
+        {
+            "codecMib": 106,
+            "encoding": "UTF-8",
             "file": ".gitignore",
             "name": ".gitignore",
             "type": ""
@@ -142,6 +198,41 @@
             "encoding": "UTF-8",
             "file": "LAB1_Example04.lst",
             "name": "LAB1_Example04.lst",
+            "type": "lst"
+        },
+        {
+            "codecMib": 106,
+            "encoding": "UTF-8",
+            "file": "LAB1_Example04.lxi",
+            "name": "LAB1_Example04.lxi",
+            "type": "lxi"
+        },
+        {
+            "codecMib": 106,
+            "encoding": "UTF-8",
+            "file": "LAB1_Example05.lst",
+            "name": "LAB1_Example05.lst",
+            "type": "lst"
+        },
+        {
+            "codecMib": 106,
+            "encoding": "UTF-8",
+            "file": "LAB1_Example06.lst",
+            "name": "LAB1_Example06.lst",
+            "type": "lst"
+        },
+        {
+            "codecMib": 106,
+            "encoding": "UTF-8",
+            "file": "LAB1_Example07.lst",
+            "name": "LAB1_Example07.lst",
+            "type": "lst"
+        },
+        {
+            "codecMib": 106,
+            "encoding": "UTF-8",
+            "file": "LAB1_Example08.lst",
+            "name": "LAB1_Example08.lst",
             "type": "lst"
         },
         {
@@ -173,6 +264,6 @@
     "path": ".",
     "pf": "",
     "projectType": 1,
-    "timestamp": "2026-03-07T22:37:25.327",
+    "timestamp": "2026-03-07T23:29:05.032",
     "workDir": "."
 }
